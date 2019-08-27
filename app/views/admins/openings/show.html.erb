@@ -1,3 +1,10 @@
 <h2><%= @opening.title %></h2>
 
 <p><strong>Description:</strong> <%= @opening.description %></p>
+
+<h2>Applicants</h2>
+<ul>
+  <% @opening.job_applications.each do |apps| %>
+    <li><%= apps.user.email %></li>
+  <% end %>
+</ul>

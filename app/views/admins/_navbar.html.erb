@@ -10,7 +10,7 @@
 <% elsif user_signed_in? %>
   <ul>
     <li><%= link_to 'Current openings', users_openings_path %></li>
-    <li>Welcome <%= current_user.email %><li>
+    <li>Welcome <%= current_user.email %></li>
       <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
   </ul>
 <% end %>

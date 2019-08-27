@@ -1,0 +1,11 @@
+<h2><%= @opening.title %></h2>
+<p><%= @opening.description %></p>
+
+<% if @opening.user_has_applied?(current_user) %>
+  <p>You have already applied to this position.</p>
+<% else %>
+  <%= form_for :job_application, url: users_job_applications_path do |f| %>
+    <%= f.hidden_field :opening_id, value: @opening.id %>
+    <%= f.submit "Apply" %>
+  <% end %>
+<% end %>

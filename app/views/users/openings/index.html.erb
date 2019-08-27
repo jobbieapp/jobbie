@@ -1,1 +1,17 @@
-<%= current_user.inspect %>
+<h2>Current Openings</h2>
+
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Title</th>
+    </tr>
+
+    <% @openings.each do |opening| %>
+      <tr>
+        <td><%= opening.business.name %></td>
+        <td><%= link_to opening.title, users_opening_path(opening) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+

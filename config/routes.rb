@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :openings
+    resources :job_applications
   end
 end
