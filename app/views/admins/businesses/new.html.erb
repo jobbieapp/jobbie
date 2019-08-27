@@ -1,0 +1,7 @@
+<h2>Create business</h2>
+<%= render 'shared/errors', object: @business %>
+<%= form_for [:admins, @business] do |f| %>
+  <%= f.label :name, 'Employer name' %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create business" %>
+<% end %>

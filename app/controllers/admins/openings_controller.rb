@@ -1,5 +1,5 @@
 module Admins
-  class Admins::OpeningsController < BaseController
+  class OpeningsController < BaseController
     def index
     end
   end

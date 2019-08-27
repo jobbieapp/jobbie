@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admins do
     resources :openings
+    resources :businesses, except: [:index, :destroy, :show]
   end
 
   namespace :users do
