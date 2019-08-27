@@ -5,6 +5,8 @@
 <h2>Applicants</h2>
 <ul>
   <% @opening.job_applications.each do |apps| %>
-    <li><%= apps.user.email %></li>
+    <li>
+      <%= "#{apps.user.first_name} #{apps.user.last_name} - #{apps.user.email}" %>
+    </li>
   <% end %>
 </ul>
