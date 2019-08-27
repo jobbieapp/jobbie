@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  opening: one
+jobapp:
+  user: userperson
+  opening: bestopening
 
 two:
   user: two

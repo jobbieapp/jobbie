@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  business: 
-  admin: 
+bestopening:
+  business: bestbusiness
+  admin: adminperson
   title: MyString
   description: MyText
 
-two:
-  business: 
-  admin: 
+anotheropening:
+  business: bestbusiness
+  admin: adminperson
   title: MyString
   description: MyText
