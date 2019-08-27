@@ -1,0 +1,11 @@
+<h2>Create opening</h2>
+<%= render 'shared/errors', object: @opening %>
+<%= form_for [:admins, @opening] do |f| %>
+  <%= f.label :title, 'Title' %>
+  <%= f.text_field :title %>
+  <br />
+  <%= f.label :description, 'Description' %>
+  <%= f.text_area :description %>
+  <br />
+  <%= f.submit "Create opening" %>
+<% end %>

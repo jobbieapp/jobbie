@@ -1,2 +1,26 @@
 <%= link_to 'Edit business information', edit_admins_business_path(current_business) %>
 <%= current_admin.inspect %>
+
+<h1>Listing openings</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @openings.each do |opening| %>
+  <tr>
+    <td><%= opening.title %></td>
+    <td><%= opening.description %></td>
+    <td><%= link_to 'Show', admins_opening_path(opening) %></td>
+    <td><%= link_to 'Edit', edit_admins_opening_path(opening) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New opening', new_admins_opening_path %>
