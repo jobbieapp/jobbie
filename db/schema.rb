@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_015737) do
+ActiveRecord::Schema.define(version: 2019_08_27_053034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(version: 2019_08_26_015737) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "openings", force: :cascade do |t|
+    t.bigint "business_id"
+    t.bigint "admin_id"
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_openings_on_admin_id"
+    t.index ["business_id"], name: "index_openings_on_business_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -48,4 +59,6 @@ ActiveRecord::Schema.define(version: 2019_08_26_015737) do
   end
 
   add_foreign_key "admins", "businesses"
+  add_foreign_key "openings", "admins"
+  add_foreign_key "openings", "businesses"
 end
