@@ -1,0 +1,4 @@
+<% if !(user_signed_in? || admin_signed_in?) %>
+  <li><%= link_to('Login for job seekers', new_user_session_path) %></li>
+  <li><%= link_to('Login for employers', new_admin_session_path) %></li>
+<% end %>
